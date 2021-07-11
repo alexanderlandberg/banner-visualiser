@@ -1,0 +1,187 @@
+#tl {
+  position: relative;
+  font-family: sans-serif;
+  background: #d9f9ee;
+  margin: 20px 10px;
+  width: 98%;
+}
+
+#tl .tl_row {
+  border: 1px solid white;
+  height: 16px;
+  position: relative;
+}
+
+#tl .tl_slot {
+  background-color: grey;
+  width: 10%;
+  font-size: 12px;
+  line-height: 14px;
+  height: 16px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  border: 1px solid #555;
+  box-sizing: border-box;
+  border-radius: 100px;
+  min-width: 2%;
+  z-index: 3;
+}
+
+#tl .tl_timespot {
+  position: absolute;
+  background: red;
+  width: 2px;
+  z-index: 4;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* transition: left XXs linear; */
+}
+
+#tl .tl_secondnumberwrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -16px;
+  left: 0;
+}
+
+#tl .tl_secondnumber {
+  position: absolute;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
+
+#tl .tl_secondlinewrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#tl .tl_secondline {
+  position: absolute;
+  background: rgb(0 0 0 / 2%);
+  width: 2px;
+  z-index: 2;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#tl .tl_secondline:nth-child(5n+6) {
+  background: rgb(0 0 0 / 6%);
+}
+
+#tl .tl_secondline:nth-child(10n+1) {
+  background: rgb(0 0 0 / 10%);
+}
+
+#tl_info {
+  display: flex;
+  justify-content: center;
+}
+
+#tl_info>div {
+  background-color: black;
+  color: #fff;
+  padding: 6px 10px;
+  margin: 0px 10px;
+  font-size: 14px;
+}
+
+#tl_info .var_scalerotate {
+  background-color: #5252e0;
+}
+
+#tl_info .var_xy {
+  background-color: #e05252;
+}
+
+#tl_info .var_opacity {
+  background-color: #22c322;
+}
+
+#tl_info .var_hw {
+  background-color: #ad1fad;
+}
+
+#tl_info .var_function {
+  background-color: #000;
+}
+
+#tl_range {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+#tl_range>div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column
+}
+
+#tl_range>div>span {
+  text-align: center;
+}
+
+#tl[data-rowheight="12"] .tl_row {
+  height: 12px;
+}
+
+#tl[data-rowheight="12"] .tl_slot {
+  height: 12px;
+  line-height: 10px;
+}
+
+#tl[data-rowheight="16"] .tl_row {
+  height: 16px;
+}
+
+#tl[data-rowheight="16"] .tl_slot {
+  height: 16px;
+  line-height: 14px;
+}
+
+#tl[data-rowheight="20"] .tl_row {
+  height: 20px;
+}
+
+#tl[data-rowheight="20"] .tl_slot {
+  height: 20px;
+  line-height: 18px;
+}
+
+#tl[data-rowheight="24"] .tl_row {
+  height: 24px;
+}
+
+#tl[data-rowheight="24"] .tl_slot {
+  height: 24px;
+  line-height: 22px;
+}
+
+#tl[data-rowheight="28"] .tl_row {
+  height: 28px;
+}
+
+#tl[data-rowheight="28"] .tl_slot {
+  height: 28px;
+  line-height: 26px;
+}
+
+#tl[style*="width: 50%;"] .tl_secondline,
+#tl[style*="width: 40%;"] .tl_secondline,
+#tl[style*="width: 30%;"] .tl_secondline,
+#tl[style*="width: 20%;"] .tl_secondline,
+#tl[style*="width: 10%;"] .tl_secondline {
+  display: none;
+}
+
+#tl .tl_secondline:nth-child(5n+6),
+#tl .tl_secondline:nth-child(10n+1) {
+  display: block;
+}
